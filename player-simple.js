@@ -33,4 +33,13 @@ const Player = new function(){
 	this.draw = function(){
 		raylib.DrawRectangle(this.x,this.y,this.height,this.width,this.color)
 	}
+    this.getCollisionRect = function(){
+        // Returns the collision rectangle for the player
+        return {
+            x1: this.x,
+            y1: this.y,
+            x2: this.width,
+            y2: this.height
+        };
+    };
 }()
